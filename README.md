@@ -12,7 +12,7 @@ Supports secure authentication, live messaging, and clean UI for mobile platform
 - 📱 Responsive UI for Android and iOS
 - 🧼 Clean code & well-structured project
 
-
+---
 
 ## 🛠️ Tech Stack
 
@@ -31,8 +31,9 @@ cd flutter-chat-app
 flutter pub get
 flutter run
 
+## 📁 Folder Structure
 
-## Folder Structure
+
 | Folder     | Description          |
 | ---------- | -------------------- |
 | `lib/`     | App logic and UI     |
@@ -41,7 +42,6 @@ flutter run
 | `web/`     | Web-specific files   |
 | `assets/`  | Fonts & images       |
 | `test/`    | Test files           |
-
 
 ## 👨‍💻 Author
 
