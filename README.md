@@ -1,16 +1,50 @@
-# chat_app
+# 💬 Flutter Chat App
 
-A new Flutter project.
+A real-time chat application built using **Flutter** and **Firebase**.  
+Supports secure authentication, live messaging, and clean UI for mobile platforms.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Features
 
-A few resources to get you started if this is your first Flutter project:
+- 🔐 **Firebase Authentication** (Email/Password)
+- 📡 **Real-time messaging** using Firestore
+- 📱 Responsive UI for Android and iOS
+- 🧼 Clean code & well-structured project
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## 🛠️ Tech Stack
+
+- **Flutter**
+- **Dart**
+- **Firebase Authentication**
+- **Cloud Firestore**
+
+---
+
+## 🧪 Getting Started
+
+```bash
+git clone https://github.com/MohamedGamil13/flutter-chat-app.git
+cd flutter-chat-app
+flutter pub get
+flutter run
+
+
+## Folder Structure
+| Folder     | Description          |
+| ---------- | -------------------- |
+| `lib/`     | App logic and UI     |
+| `android/` | Android native files |
+| `ios/`     | iOS native files     |
+| `web/`     | Web-specific files   |
+| `assets/`  | Fonts & images       |
+| `test/`    | Test files           |
+
+
+## 👨‍💻 Author
+
+**Mohamed Gamil**  
+Flutter Developer @ MSP Tech Club – Ain Shams University  
+[LinkedIn](https://www.linkedin.com/in/mohamedgamil13/)
