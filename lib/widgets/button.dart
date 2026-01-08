@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Mybutton extends StatelessWidget {
   String text;
   VoidCallback onTap;
-  Mybutton({required this.text, required this.onTap});
+  Mybutton({super.key, required this.text, required this.onTap});
   @override
   Widget build(BuildContext context) {
     return SizedBox(

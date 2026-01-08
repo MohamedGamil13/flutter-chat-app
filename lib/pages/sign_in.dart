@@ -1,19 +1,19 @@
-import 'package:chat_app/helpers/showSnackBar.dart';
 import 'package:chat_app/pages/change_password.dart';
-import 'package:chat_app/pages/all_chats_page.dart';
 import 'package:chat_app/pages/chat_page.dart';
 import 'package:chat_app/pages/sign_up.dart';
 import 'package:chat_app/widgets/button.dart';
 import 'package:chat_app/widgets/custom_list_tile.dart';
 import 'package:chat_app/widgets/custom_logo.dart';
-import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 
 class SignIn extends StatelessWidget {
   String? email;
   String? password;
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  SignIn({super.key});
 
   @override
   Widget build(BuildContext context) {

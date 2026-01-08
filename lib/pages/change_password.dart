@@ -1,7 +1,7 @@
 import 'package:chat_app/widgets/button.dart';
 import 'package:chat_app/widgets/custom_list_tile.dart';
-import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 
 class ChangePassword extends StatelessWidget {
   ChangePassword({super.key});

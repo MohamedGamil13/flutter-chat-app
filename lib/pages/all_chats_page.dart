@@ -1,8 +1,8 @@
 import 'package:chat_app/pages/mini_chats_page.dart';
 import 'package:chat_app/widgets/custom_app_bar.dart';
-import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 
 class ChatsPage extends StatelessWidget {
   const ChatsPage({super.key});
@@ -21,7 +21,7 @@ class ChatsPage extends StatelessWidget {
             // استبعاد المستخدم الحالي
             final usersList = snapshot.data!.docs
                 .where((doc) => doc['email'] != currentUserEmail)
-                .map((doc) => doc.data() as Map<String, dynamic>)
+                .map((doc) => doc.data())
                 .toList();
 
             return Stack(

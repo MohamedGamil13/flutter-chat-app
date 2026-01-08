@@ -1,13 +1,13 @@
-import 'dart:io';
 import 'package:chat_app/helpers/showSnackBar.dart';
 import 'package:chat_app/widgets/button.dart';
 import 'package:chat_app/widgets/custom_list_tile.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 
 class SignUp extends StatefulWidget {
+  const SignUp({super.key});
+
   @override
   State<SignUp> createState() => _SignUpState();
 }
