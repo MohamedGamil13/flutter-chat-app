@@ -1,6 +1,7 @@
 import 'package:chat_app/helpers/showSnackBar.dart';
 import 'package:chat_app/pages/change_password.dart';
 import 'package:chat_app/pages/all_chats_page.dart';
+import 'package:chat_app/pages/chat_page.dart';
 import 'package:chat_app/pages/sign_up.dart';
 import 'package:chat_app/widgets/button.dart';
 import 'package:chat_app/widgets/custom_list_tile.dart';
@@ -64,52 +65,13 @@ class SignIn extends StatelessWidget {
               SizedBox(height: 20),
               Mybutton(
                 text: "Sign In",
-                onTap: () async {
-                  if (_formKey.currentState!.validate()) {
-                    if ((email?.isNotEmpty ?? false) &&
-                        (password?.isNotEmpty ?? false)) {
-                      BuildContext dialogContext = context;
-                      try {
-                        showDialog(
-                          context: dialogContext,
-                          barrierDismissible: false,
-                          builder: (_) =>
-                              Center(child: CircularProgressIndicator()),
-                        );
-
-                        await signIn();
-
-                        Navigator.of(dialogContext).pop();
-                        await Future.delayed(Duration(milliseconds: 300));
-                        ShowsSnackBar(dialogContext, "Signed in successfully");
-                        Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(builder: (context) => ChatsPage()),
-                        );
-
-                        // Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => HomePage()));
-                      } on FirebaseAuthException catch (e) {
-                        Navigator.of(dialogContext).pop();
-                        await Future.delayed(Duration(milliseconds: 300));
-
-                        String message = "An error occurred";
-                        if (e.code == 'user-not-found') {
-                          message = 'No user found for that email.';
-                        } else if (e.code == 'wrong-password') {
-                          message = 'Wrong password provided.';
-                        } else if (e.code == 'invalid-email') {
-                          message = 'Invalid email address.';
-                        }
-
-                        ShowsSnackBar(dialogContext, message);
-                      }
-                    } else {
-                      ShowsSnackBar(
-                        context,
-                        "Please enter both email and password",
-                      );
-                    }
-                  }
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ChatPage(email: email!),
+                    ),
+                  );
                 },
               ),
               SizedBox(height: 50),
